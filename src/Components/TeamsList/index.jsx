@@ -1,25 +1,15 @@
-import React, {useEffect, useState} from "react";
-import {getTeams} from "../../api";
+import React, {useState} from "react";
 import {Table, Input, Divider, Button, Space, Spin} from "antd";
-import {getDataSource} from "./common/getDataSource";
 import {culumns} from '../TeamsList/common/tableColumns';
 import 'antd/dist/antd.css';
+import {useTeams} from "./hooks/useTeams";
 
 const {Search} = Input;
 
 export const TeamsList = (props) => {
-    const [teamsData, setTeamsData] = useState(null) // Данные с сервера по командам
-    const [isTeamsLoaded, setTeamsLoaded] = useState(false) // Это состояние для того, чтобы понять загрузились наши данные с сервера или нет
-
-    // Тут будут данные по поиску
     const [filterTeams, setFilterTeams] = useState('')//Состояние для поиска команд
 
-    useEffect(() => {
-        getTeams().then((data) => {
-            setTeamsData(getDataSource(data.teams))
-            setTeamsLoaded(true)
-        });
-    }, [])
+    const {isTeamsLoaded, teamsData} = useTeams();
 
     if (!isTeamsLoaded) { // если данные не загружены показываем спиннер
         return <Spin/>

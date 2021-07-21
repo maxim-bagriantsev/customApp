@@ -33,7 +33,7 @@ export const App = (props) => {
                             </NavLink></Menu.Item>
                             <Menu.Item key={4}><NavLink style={{color: 'white'}} to='/matches'>Матчи
                             </NavLink></Menu.Item>
-                            <Menu.Item key={5}><NavLink style={{color: 'white'}} to='/customHooks'>Пользовательскиу хуки
+                            <Menu.Item key={5}><NavLink style={{color: 'white'}} to='/customHooks'>Пользовательские хуки
                             </NavLink></Menu.Item>
                         </Menu>
                     </Header>
