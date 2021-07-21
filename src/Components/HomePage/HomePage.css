@@ -1,0 +1,30 @@
+.homePage {
+    display: grid;
+    grid-template-areas:
+    'homePage_img homePage_heading'
+    'homePage_img descriptionSPA'
+}
+
+.homePage_img {
+    grid-area: homePage_img;
+}
+
+.homePage_heading {
+    margin: 0 auto;
+    grid-area: homePage_heading;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.descriptionSPA {
+    margin: -200px auto;
+    grid-area: descriptionSPA;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
