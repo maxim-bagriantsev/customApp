@@ -1,11 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {useHistory, useParams} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import moment from 'moment';
 import {Table, DatePicker, Space, Divider, Spin} from 'antd';
-import {getDataSource} from './common/getDataSource';
 import {culumns} from './common/tableColumns';
-import {getTeamMatches} from '../../api';
-import {useQuery} from '../../hooks/useQuery';
 import {useTeamMatches} from "./hooks/useTeamMatches";
 
 export const TeamMatches = () => {
